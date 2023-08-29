@@ -1,18 +1,20 @@
 import streamlit as st
 import Functions
 
+
 def add_todo():
     todo = st.session_state["new_todo"] + '\n'
     todos.append(todo)
     Functions.write_todos(todos)
 
+
 todos = Functions.get_todos()
 
-st.title('My Checklist')
+st.title('My Check list')
 st.subheader('This is my checklist')
 st.write('This app is to increase your productivity'
-         ' by allowing you to keep track of tasks that need '
-         'to be completed.')
+         ' by allowing you to keep track of tasks that <b>need</b> '
+         'to be completed.', unsafe_allow_html=True)
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)

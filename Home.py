@@ -10,7 +10,7 @@ def add_todo():
 
 todos = Functions.get_todos()
 
-st.title('My Check list')
+st.title('Check-list')
 st.subheader('This is my checklist')
 st.write('This app is to increase your productivity'
          ' by allowing you to keep track of tasks that <b>need</b> '
